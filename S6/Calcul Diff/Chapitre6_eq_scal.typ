@@ -1,0 +1,105 @@
+#set text(size: 13pt, lang: "fr")
+#show math.equation.where(block: false): math.display
+#set page(numbering: "1 sur 1", number-align: center)
+#set par(justify: true)
+#import "../../titres.typ": *
+#align(center, text(20pt)[*Calcul Différentiel*])
+#align(center, text(15pt)[Chapitre 6 - Équations scalaires]) \
+#show outline.entry.where(level: 1): it => {
+  v(12pt)
+  strong(it)
+}
+#text(1.3em)[#outline(title : "")]
+#pagebreak()
+
+On considère $X' = f(t, X)$ $redstar$\
+avec $f : I times Omega --> RR$, $Omega$ ouvert de $RR$
+= I. Fonctions scalaires linéaires
+
+#def() On dit que l'équation différentielle $redstar$ est *linéaire*\ 
+si $f(t, a) = a(t)x+b(t)$ (avec $a$ et $b$ des fonctions continues sur $I$)\
+Elle est dite *homogène* (ou sans second membre) si $b = 0$\
+Elle est *autonome* (ou a coefficients constants) si els fonctions $a$ et $b$ sont constantes (et alors $I = RR$)
+
+#rq() $f(t, x) = a(t)x + b(t)$ est continue sur $I times RR$ et (localement) lipschitzienne en $x$\
+Donc Cauchy-Lipschitz s'applique : $forall (t_0, x_0) in I times RR$ il existe une unique solution maximale. De plus elle est globale
+
+== 1. Cas homogène
+
+$ cases(X' = a(t)X, X(t_0) = x_0) $
+Si $x_0 = 0$ la fonction $X : t ass 0$ est la seule solution "évidente"\
+Si $x_0 != 0, alors forall t in I, X(t) != 0$
+
+= Rattraper
+
+#pagebreak()
+= Mercredi 1er Avril
+
+#thm("(admis)") En toute dimension $d>=1$, si toutes les valeurs propres de $A$ ont une partie réelle strictement négative\
+alors $exists C > 0, exists gamma W> 0, forall x_0 in RRd, forall t in RR, norm(X(t)) <= C e^(- gamma t) norm(x_0)$
+
+== 2. Cas non-homogène
+
+=== Méthode de la variation des constantes
+
+On considère $X' = A(t)X + B(t)$\
+$A in Cr(I, M_d (RR))$\
+$B in Cr(I, RRd)$\
+$Omega = RRd$
+
+Supposons qu'on connaisse $d$ solutions linéairement indépendantes $X_1, ..., X_d$ du système homogène $X' = A(t)X$\
+Alors on sait que toute solution de cette equation homogène s'écrit $ X(t) = sum_(i=1)^d alpha_i X_i (t) $
+
+On sait alors, pour les memes raisons que dans le cas scalaire (d = 1), que les solutions de l'équation avec second membre s'écrivent $X(t) = Z(t)+X_p (t)$, avec $Z$ solution de de $Z' = A(t)Z$, et $X_p$ une solution particulière de l'équation avec second membre.
+
+Pour trouver une solution particulière, on peut appliquer la méthode de la variation des constantes qui consiste à chercher $X_p$ sous la forme $ X_P (t) = sum_(i=1)^d alpha_i (t) X_i (t) $
+
+En injectant cette expression dans l'équation $X' = A(t)X + B(t)$ on obtient 
+$ sum_(i=1)^d (alpha'_i (t)X_i (t) + cancel(alpha_i (t) X_i '(t))) = cancel(sum_(i=1)^d alpha_i (t)A(t)X_i (t)) + B(t) $
+
+#text(gray)[Car $X_i' (t) = A(t)X_i (t)$]\
+Et donc on a le système d'inconnues $(alpha_i'(t))_(1<=i<=d)$ $ sum_(i=1)^d alpha_i' (t)X_i (t) = B(t) "    "redstar $
+#def() 2 fonctions $x et y$ sont dites *liées* si $ exists alpha, beta in RR, alpha x + beta y = 0 $ Dans le cas contraire on dit que $x et y$ sont liées
+
+#pagebreak()
+#prop() Le système $redstar$ est bien inversible pour tout $t in I$\
+i.e. pour tout $t in RR$, la famille $(X_i (t))$ est libre dans $RR$
+
+#demo()[
+Soit $t_0 in I et soient alpha_1, ..., alpha_d in RR tq sum_(i=1)^d alpha_i X_i (t_0)=0$\
+Posons alors la fonction $X : t ass sum_(i=1)^d alpha_i X_i (t) in C1(I, RRd)$. Cette fonction est solution du problème de Cauchy $ cases(X' = A(t) X, X(t_0)=0) $ 
+Or la fonction nulle est également solution. Par unicité de Cauchy-Lipschitz, on a 
+$ X = 0,\ 
+i.e.forall t in I, sum_(i=1)^d alpha_i X_i (t) = 0 $ Or la famille $(X_i)_(1, <= i<=d)$ est libre dans $C1(I, RRd)$, donc on a $forall i in [|1, d|], alpha_i = 0$
+]
+
+Finalement, en résolvant le système de Cramer $redstar$, on obtient $alpha_i'(t)$ pour tout\ $i in [|1, d|]$ et pour tout $t in I$. On en déduit les fonctions $alpha_i$ en primitivant $alpha_i'$.
+
+
+#pagebreak()
+
+= N+I. Équations linéaires scalaires du second ordre
+
+On considère des équations de la forme $ (E) : x'' + a(t)x' + b(t)x = c(t) $ 
+d'inconnue $x in C2(I, RR) avec a, b, c in Cr(I, RR)$. On va montrer que la résolution de cette équation est équivalente a la résolution du système linéaire d'ordre 1 en dimension 2 $ X' = A(t)X+B(t) $ 
+Soit $x in C2(I, RR)$ une solution (globale) de $(E)$.\
+
+On pose alors $X(t) = mat(x(t);x'(t)) in C1(I, RR2)$ et $ X'(t) &= mat(x'(t); x''(t))\
+&= mat(x'(t); -a(t)x'(t)-b(t)x(t) + c(t))\
+&= mat(0, 1; -b(t), -a(t))mat(x(t); x'(t)) + mat(0; c(t)) $
+
+Réciproquement, soit $X(t) = mat(x(t); y(t))in C1(I, RR2)$ solution de $ X' = mat(0, 1; -b(t), -a(t))X+mat(0; c(t)) $
+i.e. $ cases(x'(t) = y(t), -b(t)x(t) - a(t)y(t) + c(t)) $
+
+De $x'=y in C1(I, RR)$ on déduit que $x in C2(I, RR) et$ $ x''(t) &= y'(t)\
+&= -b(t)x(t)-a(t)y(t)+c(t)\
+&= -b(t)x(t)-a(t)x'(t)+c(t) $
+
+Autrement dit, $x$ est solution de $(E)$. En particulier, si $a(t) = a, b(t)= b et c(t)=0$ on sait résoudre l'équation $ (E_0) : x'' + a x' + b x = 0 $ 
+
+#pagebreak()
+en résolvant le système  $ X' = mat(0, 1;-b, -a)X $
+
+#rq("importante") $forall t in I, forall x_0, y_0 in RR$ on déduit de l'équivalence précédente qu'il existe une unique solution globale $x in C2(I, RR)$ au problème de Cauchy $ cases(x''+a(t)x'+b(t)x = c(t), x(t_0) = x_0, x'(t_0) = y_0) $
+
+#ex()[Système ressort en physique]
