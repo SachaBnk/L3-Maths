@@ -255,6 +255,8 @@
 #let BD = $B^*$
 #let un = $u_n$
 
+#let Mn= $M_n$
+
 #let int = $integral$
 #let etpos = $epsilon_+$ // fonctions étagées positives
 

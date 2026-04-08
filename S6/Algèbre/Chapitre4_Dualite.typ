@@ -576,7 +576,105 @@ Soit $u = d-d' = n-n'$
 - $u$ diagonalisable 
 
 Donc $Mat_B (u) = 0 donc u = 0$
-
-
-
 ]
+
+#pagebreak()
+#ex(1)[
+$Mat_((e_1, e_2, e_3))(f) = mat(1, 1, 0; 0, 1, 0; 1, -1, 2) =: A$\
+$chi_A = (1-X)^2(2-X)$ est scindé
+
+$E_1 = ker (A-I_3) = Vect{mat(1;0;-1)}$
+
+$N_1 = ker (A-I_3)^2 = Vect{u_1, u_2:=mat(0;1;0)}\
+N_2 = E_2 = ker (A-2I_3) = Vect {u_3:=mat(0;0;1)}\
+B = (u_1, u_2, u_3)\
+Mat_B (f) = mat(1, 1, 0; 0,1,0;0,0,2) := T\
+car :\
+f(u_1) = u_1\
+f(u_2) = A u_2 = u_1+u_2\
+f(u_3) = 2u_3$
+
+$ A = P T Pm avec P &= (u_1|u_2|u_3)\
+&= mat(1,0,0;0,1,0;-1,0,1) $
+$ avec T = D'+N', A = P D' Pm + P N' Pm\
+D' = mat(1, 0, 0; 0, 1, 0; 0, 0, 2), N' = mat(0, 1, 0; 0, 0, 0; 0, 0, 0) $
+]
+
+#pagebreak()
+#ex(2)[
+$A = mat(1, 1, 2; 2, 3, 6; 0, -1, -1)$\
+$chi_A = (X-1)^3$ scindé\
+A n'est pas diagonalisable (sinon, $pi_A = X-1, et donc A-I_3 = 0 donc A = I_3$)
+
+$E = N_1 donc D = D_1 = lambda I_3 donc D = I_3\
+Alors N=A-D = A-I_3$
+]
+
+#ex(3)[
+$A = mat(3,2,4;-1,3,-1;-1,-1,-3)$
+
+$chi_A = -(X+1)(X-2)^2$ scindé\
+$N_(-1) = E_(-1) = ker (A+I_3) = Vect{u_1:=mat(-1;0;1)}\
+E_2 = ker (A-2I_3) = Vect{u_2 := mat(-2;-1;1)}$
+
+$N_2 = ker (A-2I_3)^2 &= ker mat(-9, 0, -18; 0,0,0;9,0,18)\
+&= Vect{mat(-2;0;1), mat(0;1;0)}\
+&= Vect{u_2-u_3, u_3}\
+&= Vect{u_2, u_3}$
+
+$f(u_1) = A u_1 = -u_1\
+f(u_2) = A u_2 = 2u_2\
+f(u_3) = A u_3 = mat(2;3;-1) = -u_2+2u_3 "    (calcul)"$
+
+$P = (u_1|u_2|u_3), T = mat(-1, 0, 0; 0, 2, -1; 0,0,2), A = P T Pm\
+T = D'+N' avec D' = mat(-1,0,0;0,2,0;0,0,2) et N' = mat(0,0,0;0,0,-1;0,0,0)$
+]
+
+#pagebreak()
+= X. Applications au calcul des puissances d'une matrice
+
+Soit $A in Mn(K) et k in NN$\
+Si $chi_A$ est scindé, alors $A = D+N$ avec $D$ diagonale, $N$ nilpotente et $N D = D N$
+
+$Soit p = Nil(N)$
+
+$ A &=^(D N = N D) sum_(i=0)^k mat(k;i)N^i D^(k-i)\
+&= sum_(i=0)^(p-1) mat(k;i) N^i D^(k-i) $
+$D = P D' Pm avec D'$ diagonale\
+Donc $D^i = P (D')^i Pm$
+
+#ex()[
+$A = mat(-1,-2,-2; -1,1,-1;3,2,4)$\
+$chi_A = -(X-1)^2(X-2)$ scindé
+
+$ker (A-2I_3) = Vect{u_1 := mat(0;1;-1)}\
+ker(A-I_3) = Vect{u_2 := mat(1;0;-1)}\
+ker((A-I_3)^2) = Vect{u_2, u_3:=mat(0;1;0)}$
+
+$P = mat(0,1,0; 1,0,1; -1,-1,0)\
+T = Pm A P = mat(2, 0, 0; 0, 1, -2; 0,0,1)\
+D' = mat(2, 0,0;0,1,0;0,0,1), N' = mat(0,0,0;0,0,-2;0,0,0) -> Nil (N') = 2$
+
+#pagebreak()
+$ A^k &= sum_(i=0)^1 mat(k;i) P (N')^i Pm dot P (D')^(k-i)Pm\
+&= P [sum_(i=0)^1 mat(k;i)(N')^i (D')^(k-i)]Pm\
+&= P[(D')^k + k(D')^(k-1) dot N']Pm\
+&= P[mat(2^k, 0, 0; 0,1,0;0,0,1) + k mat(2^(k-1),0,0;0,1,0;0,0,1)dot mat(0,0,0;0,0,-2;0,0,0)]Pm\
+&= ...\
+&= mat(1-2k, -2k, -2k; -2^k+1, 1, -2^k+1; 2^k-1+2k, 2k, 2^k+2k) $
+]
+
+== 1. Exponentielle d'une matrice
+$K = RR ou CC$
+
+#def() Soit $A in Mn(K)$. *L'exponentielle de A*, notée $e^A$, est définie par $ e^A = sum_(i=0)^pinf A^i/i! $
+
+#thm() Soient $A, B in Mn(K)$
+- $e^A$ est normalement convergente ($e^A$ est bien définie)
+- $e^(0_Mn(K)) = I_n$
+
+- $D = mat(a_1, , 0; , dots.down, ; 0, , a_n)$, alors $e^D = mat(e^(a_1), , 0; , dots.down, ; 0, , e^(a_n))$
+
+- $N^p = 0 imp e^N = sum_(i=0)^(p-1) N^i/i!$
+
+- $A = P B Pm imp e^A = P e^B Pm$
