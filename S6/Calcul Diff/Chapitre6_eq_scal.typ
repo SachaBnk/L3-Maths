@@ -183,10 +183,9 @@ $ Sr = {alpha_1e^(-3t) + alpha_2e^t - 1/9(2+3t) | alpha_1, alpha_2 in RR} $
 *3. Résolution du pb de Cauchy avec les données initiales*\
 Pour $y in Sr$, on évalue $y et y'$ en 0, on obtient un système, on le résout pour $alpha_1, alpha_2 in RR$
 
-ici $alpha_1 = ... et alpha_2 = ...$
+ici $alpha_1 = -5/18 et alpha_2 = 1/2$
 
-
-
+(flemme d'écrire plus gros sayer)
 ]
 
 
