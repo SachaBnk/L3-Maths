@@ -678,3 +678,11 @@ $K = RR ou CC$
 - $N^p = 0 imp e^N = sum_(i=0)^(p-1) N^i/i!$
 
 - $A = P B Pm imp e^A = P e^B Pm$
+
+- $A e^A = e^A A$
+
+- Soit $f(t) = e^(t A), alors f'(t) = A f(t) = f(t)A$
+
+- Si $A B = B A, alors e^(A+B) = e^A e^B$
+
+- $e^A$ est inversible, d'inverse $e^(-A)$
