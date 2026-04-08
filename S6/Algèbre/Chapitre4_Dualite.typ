@@ -503,7 +503,8 @@ Comment on fait ça ? On prend une base de $ker(f-lambda_i id_E)$ complétée en
 #ex()[
 $f in Lr(RR^3) et (e_1, e_2, e_3)$ base canonique 
 
-$A := Mat_((e_1, e_2, e_3)) (f) = mat(1, 1, 0; 0, 1, 0; 1, -1, 2)$\
+$A := Mat_((e_1, e_2, e_3)) (f) = mat(1, 1, 0; 0, 1, 0; 1, -1, 2)$
+
 On calcule $chi_A = (1-X)^2(2-X)$ scindé $imp A$ trigonalisable
 
 $ ker (A-I_3) &= ker mat(0, 1, 0; 0, 0, 0; 1, -1, 1)\
