@@ -664,7 +664,7 @@ $ A^k &= sum_(i=0)^1 mat(k;i) P (N')^i Pm dot P (D')^(k-i)Pm\
 &= mat(1-2k, -2k, -2k; -2^k+1, 1, -2^k+1; 2^k-1+2k, 2k, 2^k+2k) $
 ]
 
-== 1. Exponentielle d'une matrice
+== Exponentielle d'une matrice
 $K = RR ou CC$
 
 #def() Soit $A in Mn(K)$. *L'exponentielle de A*, notée $e^A$, est définie par $ e^A = sum_(i=0)^pinf A^i/i! $
