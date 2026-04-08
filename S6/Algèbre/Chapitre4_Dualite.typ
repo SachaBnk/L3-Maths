@@ -228,10 +228,77 @@ Réciproquement, tout sev de E de dimension $n-r$ est l'intersection des noyeaux
   - pareil avec des ronds
   - pareil avec des ronds
 
+#demo()[
+*1.a)*\
+On a $F subset F+F' et F' subset F+F' donc (F+F')^bot subset F^bot et (F+F')^bot subset (F')^bot$\
+Donc $(F+F')^bot subset F^bot inter (F')^bot$
 
-= Rattraper
+Soit $Phi in F^bot inter (F')^bot et x in F+F'$\
+Donc $exists y in F et z in F' tq x = y+z$\
+On a $Phi(x) = Phi(y+z) = Phi(y)+Phi(z) = 0+0=0$\
+Donc $Phi in (F+F')^bot$
 
+*1.b)*\
+$F inter F' subset F et F inter F' subset F' donc F^bot subset (F inter F')^bot et (F')^bot subset (F inter F')^bot$\
+$donc F^bot+(F')^bot subset (F inter F')^bot$
+
+D'autre part 
+$ dim (F^bot + (F')^bot) &= dim(F^bot)+dim((F')^bot)-dim(F^bot inter (F')^bot)\
+&=^(a\)) dim(F^bot)+dim((F')^bot)-dim((F + F')^bot)\
+&= n-dim(F) + n - dim(F') - (n-dim(F+F'))\
+&= 2n - dim(F) - dim(F') - n + dim(F+F')\
+&= n - cancel(dim(F)) - cancel(dim(F')) + cancel(dim(F)) + cancel(dim(F')) - dim(F inter F')\
+&= n-dim(F+F') = dim((F+F')^bot) $
+
+#rappel() $ T : func(E &-->^tilde (E^*)^*, x &ass func(E^* &-->K, Phi &ass Phi(x))) $
+$B subset ED, T(B) = B^bot ssi B° = Tm(B^bot)$
 #pagebreak()
+*2.a)*\
+$ (G+G')° &= Tm((G + G')^bot)\
+&= Tm(G^bot inter (G')^bot)\
+&= Tm(G^bot) inter Tm((G')^bot)\
+&= G° inter (G')° $
+
+*2.b)*\
+$ (G inter G')° &= Tm((G inter G')^bot)\
+&= Tm(G^bot + (G')^bot)\
+&= Tm(G^bot)+Tm((G')^bot)\
+&= G°+(G')° $
+]
+
+#ex()[
+$u_1=(1,2,1) et u_2=(0,1,0)$\
+$F = Vect{u_1}$\
+$G = Vect{u_1,u_2}$
+
+*On commence par ${u_1}^bot et {u_1, u_2}^bot$*\
+$Soit u_3 = e_3 = (0,0,1)$\
+$B = (u_1, u_2, u_3)$ base de $RR^3$\
+$Soit u^* = a_i e_1^* + b_i e_2^* + c_i e_3^*$
+
+$M = mat(a_1, b_1,c_1;a_2,b_2,c_2;a_3,b_3,c_3), N = (u_1,u_2,u_3) = mat(1,0,0;2,1,0;1,0,1)$
+
+$M = N^(-1) = mat(1,0,0;-2,1,0;-1,0,1)$\
+Donc $B^* = (e_1^*, -2e_1^*+e_2^*, -e_1^*+e_3^*)$\
+${u_1}^bot = Vect{u_2^*,u_3^*} = Vect{-2e_1^*+e_2^*, -e_1^*+e_3^*}$
+
+$ F = {(x,y,z) in RR^3 | u_2^*(x,y,z)=0 et u_3^*(x,y,z)=0} $
+#pagebreak()
+Mais 
+$ u_2^*(x,y,z) &= u_2^*(x e_1+y e_2+z e_3)\
+&= -2e_1^*(x e_1+y e_2 + z e_3) + e_2^*(x e_1 + y e_2 + z e_3)\
+&= -2x+y $
+De même, $u_3^*(x,y,z)=-x+z$, donc
+$ F = {(x,y,z)in RR^3 | y=2x et x=z} $
+
+D'autre part :\
+${u_1,u_2}^bot = Vect{u_3^*} = Vect{-e_1^*+e_3^*}$
+$ G = {(x,y,z)in RR^3 | x = z} $
+]
+
+#rappel() Soit $A subset E$ sous ensemble et $(e_1,...,e_p)$ une base de $Vect(A)$\
+Soit $(e_1,...,e_p,e_(p+1),...,e_n)$ une base de $E$\
+Alors $ A^bot = Vect(e_(p+1)^*, ..., e_n^*) $
 
 = V. Polynomes d'endomorphismes
 
@@ -474,7 +541,6 @@ $ P = (u_1|u_2|u_3) = mat(1, 0, 0; 0, 1, 0; -1, 0, 1) $
 Alors $A = P T Pm$
 ]
 
-#pagebreak()
 = IX. Décomposition de Dunford
 
 #thm() Soit $f in LE tq chi_f$ scindé.\ Alors il existe un unique couple $(d, n) in LE^2 tq $
@@ -521,7 +587,7 @@ $ Mat_B (d) = #pavemat(pave:(
   ,0, , , , dots.down;
   , , , , , ,lambda_m)$] $
 
-#pagebreak()
+
 *2. $n$ est nilpotent*\
 $N_i$ est stable par $n_i$
 
@@ -550,7 +616,7 @@ $ (d rond n)(v) &= (d rond n)(v_1+...+v_m)\
 (n rond d)(v) &= ...\
 &= lambda_1n_1(v_1)+...+lambda_m n_m (v_m) $
 
-#pagebreak()
+
 #text(1.3em)[*Unicité*]
 
 Supposons $(d', n')$ un autre couple satisfaisant les memes conditions, on mq $N_i$ stable par $d'$ 
