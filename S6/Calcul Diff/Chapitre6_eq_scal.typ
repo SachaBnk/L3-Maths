@@ -185,8 +185,23 @@ Pour $y in Sr$, on évalue $y et y'$ en 0, on obtient un système, on le résout
 
 ici $alpha_1 = -5/18 et alpha_2 = 1/2$
 
-(flemme d'écrire plus gros sayer)
+(flemme d'écrire plus sayer)
 ]
 
+= III. Systèmes non-linéaires autonomes
+\
+$Omega subset RRd\
+I = RR$
+$ redstar : X' = f(X) $
 
+#def() On dit qu'un point $ol(x) in Omega$ est un *point d'équilibre* pour l'équation $redstar$ si c'est un point singulier du champ de vecteur $f$\
+càd si $f(ol(x)) = 0$
 
+#def() Un point d'équilibre $ol(x)$ est dit *localement exponentiellement stable* si\
+$exists r>0, forall x_0 in B(ol(x),r), sup J = pinf$\
+et 
+$ exists alpha, C > 0, forall x_0 in B(ol(x),r),forall t >=0, norm(X(t)-ol(x)) <= C e^(-alpha t)norm(x_0-x) $
+
+On dit qu'il est *globalement exponentiellement stable* si $forall x_0 in Omega, sup J = pinf$ \
+et 
+$ exists alpha,C >0, forall x_0 in Omega, forall t >=0, norm(X(t)-ol(x)) <= C e^(-alpha t)norm(x_0-x) $
