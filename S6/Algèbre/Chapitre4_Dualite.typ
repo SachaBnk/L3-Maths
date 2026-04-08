@@ -686,3 +686,13 @@ $K = RR ou CC$
 - Si $A B = B A, alors e^(A+B) = e^A e^B$
 
 - $e^A$ est inversible, d'inverse $e^(-A)$
+
+#demo()[
+  admis
+]
+
+#rq() $A in Mn(K), chi_A$ scindé $imp A = D+N, D N = N D$
+
+$Donc e^A &= e^D e^N\
+&= P e^D'Pm dot P e^N' Pm\
+&= P e^D' e^N' Pm$
