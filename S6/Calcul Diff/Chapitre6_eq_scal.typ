@@ -1,5 +1,7 @@
 #set text(size: 13pt, lang: "fr")
 #show math.equation.where(block: false): math.display
+#show heading: it => {it.body+"\n"}
+
 
 #set par(justify: true)
 #import "../../titres.typ": *
@@ -16,6 +18,7 @@
 
 On considère $X' = f(t, X)$ $redstar$\
 avec $f : I times Omega --> RR$, $Omega$ ouvert de $RR$
+
 = I. Fonctions scalaires linéaires
 
 #def() On dit que l'équation différentielle $redstar$ est *linéaire*\ 
@@ -106,6 +109,7 @@ en résolvant le système  $ X' = mat(0, 1;-b, -a)X $
 #ex()[Système ressort en physique]
 
 == 1. Cas homogène autonome
+
 (càd sans second membre et a coef constants)\
 $Pour a,b in RR$
 $ (E_0) : x'' + a x'+ b x = 0\
