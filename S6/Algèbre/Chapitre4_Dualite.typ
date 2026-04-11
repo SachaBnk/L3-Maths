@@ -113,7 +113,7 @@ Enfin $v_3^* = e_3^*$
 
 Donc $BD = (e_1^*-e_3^*, e_2^*, e_3^*)$
 ]
-#pagebreak()
+
 = III. Base antéduale
 
 <T>
@@ -150,7 +150,7 @@ Mais $x =^"thm 12" sum_(i=0)^n e_i^*(x)e_i = 0$
 $scal(" ", " ") : func(ED times E &--> K, (Phi, x) &ass Phi(x))$
 
 #rq() $scal(" ", " ")$ est une forme bilinéaire
-#pagebreak()
+
 #thm() Soit $B' = (Phi_1, ..., Phi_n)$ une base de $ED$\
 Alors il existe une unique base $B de E$ dont $B'$ est la duale\
 On appelle $B$ la *base antéduale* de $B'$
