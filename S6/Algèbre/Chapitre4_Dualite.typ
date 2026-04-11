@@ -302,7 +302,23 @@ Alors $ A^bot = Vect(e_(p+1)^*, ..., e_n^*) $
 
 = V. Polynomes d'endomorphismes
 
-= Rattraper
+$E " "K$-ev, $dim E < pinf$\
+$Soit P : a_0 + a_1 X + ... + a_k X^k in KX$\
+On note
+- Si $f in LE, P(f) = a_0 + a_1 f + ... + a_k f^k in LE$
+- Si $A in Mn(K), P(A) = a_0 + a_1 A + ... + a_k A^k$
+
+#prop() Soient $f in LE, P, Q in KX et lambda in K$
+- $P(f) in LE$
+- Si $B$ base de $E$, alors $Mat_B (P(f)) = P(Mat_B (f))$
+- $(lambda P + Q)(f) = lambda P(f) + Q(f)$
+- $(P Q)(f) = P(f)Q(f) = (Q P)(f)$
+- $ker (P(f)) et im(P(f))$ sont stables par $f$
+- Si $lambda$ valeur propre de $f$, alors $P(lambda)$ est valeur propre de $P(f)$
+
+#demo()[
+  Celene
+]
 
 #thm("- Lemme des noyaux") Soit $f in LE, et  P_1, ..., P_k in KX$ premiers entre eux deux a deux. Posons $P = P_1...P_k$\
 Alors $ker P(f) = plus.o.big_(i=1)^k ker (P_i (f))$
@@ -419,7 +435,7 @@ Mais $p_i <= b_i$\
 Donc $p_i = b_i$
 ]
 
-#pagebreak()
+
 = VIII. Réduction
 
 #thm() Soit $f in LE$, les prop suivantes sont équivalentes 
@@ -457,10 +473,6 @@ $E_2 &= ker mat(0, 0, -1; -1, -1, 0; 0, 0, -1)\
 $B' = (v_1, v_2, v_3)$
 
 $Mat_B' (f) = mat(1, 0, 0; 0, 1, 0; 0, 0, 2)$
-
-#pagebreak()
-*Méthode 2*\
-...
 ]
 
 #demo()[
@@ -479,6 +491,7 @@ Donc $ker P(f) = E$
 
 $imp^"Lemme des Noyaux" E &= plus.o.big_(i=1)^n ker((f - lambda_i id_E)^(alpha_i))\
 &= plus.o.big_(i=1)^n ker N_i$\
+
 Soit $x in N_i$\
 $[(f-lambda_i id_E)^(alpha_i)rond f](x) &= [f rond (f - lambda_i id_E)^(alpha_i)](x)\
 &= f[(f-lambda_i id_E)^(alpha_i)(x)]\
@@ -495,7 +508,7 @@ $Mat_B (f) = mat(Mat_B_1 (g_1), ,*; , dots.down, ; 0, , Mat_B_k (g_k))$
 #rq() La preuve donne une methode pour trigonaliser $g_i$ et donc $f$ : Il suffit de trouver une base de $N_i$\
 Comment on fait ça ? On prend une base de $ker(f-lambda_i id_E)$ complétée en une base de $ker ((f-lambda_i id_E)^2)$ complétée en ... complétée en une base de $ker ((f-lambda_i id_E)^(alpha_i)$
 
-#pagebreak()
+
 #corollaire() Si $E$ est un $CC$-ev, alors tout $f in LE$ est trigonalisable
 
 #demo()[Tout polynome dans $CC$ est scindé]
@@ -542,6 +555,7 @@ $ P = (u_1|u_2|u_3) = mat(1, 0, 0; 0, 1, 0; -1, 0, 1) $
 Alors $A = P T Pm$
 ]
 
+#pagebreak()
 = IX. Décomposition de Dunford
 
 #thm() Soit $f in LE tq chi_f$ scindé.\ Alors il existe un unique couple $(d, n) in LE^2 tq $
@@ -645,7 +659,6 @@ Soit $u = d-d' = n-n'$
 Donc $Mat_B (u) = 0 donc u = 0$
 ]
 
-#pagebreak()
 #ex(1)[
 $Mat_((e_1, e_2, e_3))(f) = mat(1, 1, 0; 0, 1, 0; 1, -1, 2) =: A$\
 $chi_A = (1-X)^2(2-X)$ est scindé
@@ -697,7 +710,6 @@ $P = (u_1|u_2|u_3), T = mat(-1, 0, 0; 0, 2, -1; 0,0,2), A = P T Pm\
 T = D'+N' avec D' = mat(-1,0,0;0,2,0;0,0,2) et N' = mat(0,0,0;0,0,-1;0,0,0)$
 ]
 
-#pagebreak()
 = X. Applications au calcul des puissances d'une matrice
 
 Soit $A in Mn(K) et k in NN$\
@@ -722,7 +734,7 @@ $P = mat(0,1,0; 1,0,1; -1,-1,0)\
 T = Pm A P = mat(2, 0, 0; 0, 1, -2; 0,0,1)\
 D' = mat(2, 0,0;0,1,0;0,0,1), N' = mat(0,0,0;0,0,-2;0,0,0) -> Nil (N') = 2$
 
-#pagebreak()
+
 $ A^k &= sum_(i=0)^1 mat(k;i) P (N')^i Pm dot P (D')^(k-i)Pm\
 &= P [sum_(i=0)^1 mat(k;i)(N')^i (D')^(k-i)]Pm\
 &= P[(D')^k + k(D')^(k-1) dot N']Pm\
