@@ -320,8 +320,8 @@ On note
   Celene
 ]
 
-#thm("- Lemme des noyaux") Soit $f in LE, et  P_1, ..., P_k in KX$ premiers entre eux deux a deux. Posons $P = P_1...P_k$\
-Alors $ker P(f) = plus.o.big_(i=1)^k ker (P_i (f))$
+#thm("- Lemme des noyaux") Soit $f in LE, et  P_1, ..., P_k in KX$ premiers entre eux deux a deux. Posons $P = P_1...P_k$, alors 
+$ ker P(f) = plus.o.big_(i=1)^k ker (P_i (f)) $
 
 #demo()[
 Récurrence pour $k>=2$\
