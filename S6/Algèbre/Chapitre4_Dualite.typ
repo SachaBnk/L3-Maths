@@ -168,15 +168,11 @@ On pose $e_i = Tm(Phi_i^*)$\
 &imp lambda_1 = ... = lambda_n = 0$
 
 De plus : 
-
-$Phi_i (e_i) &= \
-&=$
-
-(rattraper dans les photos)
+...
 ]
 
 #pagebreak()
-= VI. Orthogonalité
+= IV. Orthogonalité
 
 #def() Soit $A subset E$ sev\
 *l'orthogonal* de $A$ est le sev de $ED$ défini par $A^bot = {Phi in E | forall alpha in A, scal(Phi, alpha) = 0}$
@@ -370,25 +366,77 @@ Récurrence pour $k>=2$\
 
 Alors $ker P(f) = plus.o.big_(i=1)^k E_lambda_i$\
 Avec $P = product_(i=1)^k (X-lambda_i) et E_lambda_i = ker (f - lambda_i id_E)$ l'espace propre associé a $lambda_i$
-
 = VI. Polynome minimal
 
 #def() Soit $f in LE$\
-L'application $Phi_P : func(KX &--> LE, P &ass P(f))$ est un morphisme d'un anneau vers un espace vectoriel\
-On dit que $Phi_P$ est un *morphisme d'algèbres*
+L'application $Phi_f : func(KX &--> LE, P &ass P(f))$ est un morphisme d'un anneau vers un espace vectoriel\
+On dit que $Phi_f$ est un *morphisme d'algèbres*
 
 #corollaire() Il existe un unique polynome unitaire $pi_f in KX tq ker Phi_f = (pi_f)$\
 De meme avec $A in M_n (K) et Phi_A : func(KX &--> M_n (K), P &ass P(A))$ il existe un unique polynome unitaire $pi_A tq ker Phi_A = (pi_A)$
 
 #def() $pi_f et pi_A$ sont les *polynome minimaux* de $f$ et $A$ resp.\
 
-= Rattraper
+#thm() Soit $f in LE, lambda in KK$\
+Alors $pi_f (lambda) = 0 ssi lambda$ est une valeur propre de $f$
+
+#demo()[
+Pas interessant, sur celene
+]
+
+#prop() Soit $f in LE, F "sev de" E$ stable par $f$\
+Soit $g = f|_F in Lr(F)$, alors 
+$ pi_g | pi_f et chi_g | chi_f $
 #pagebreak()
-#thm() $f in LE, chi_f$ scindé, $lambda_1, ..., lambda_m$ valeurs propres
+#demo()[
+$pi_g | pi_f ssi pi_f in ker Phi_g$
 
-Alors $pi_f = product_(i=1)^m (X-lambda_i)^(b_i)$ avec $b_i = Nil((f-lambda_i id_E)|_N_lambda_i)$
+*On mq $pi_f (g) =0$*\
+Soit $x in F, alors$
+$ pi_f (g)(x) &= pi_f (f|_F)(x)\
+&= pi_f (f)(x)\
+&= 0(x)\
+&= 0 $
+]
 
-#rq() $N_lambda_i$ = sous espace propre
+#thm("de Cayley-Hamilton") Soit $f in LE, alors$
+$ pi_f | chi_f $
+Ou de manière équivalente : $chi_f (f) = 0$
+
+De même, Pour $A in Mn(K)$, alors
+$ chi_A (A) = 0 $
+
+#demo()[celene wlh]
+
+
+
+#pagebreak()
+
+= VII. Sous-espaces caractéristiques
+
+#def() Soit $f in LE$. On dit que $f$ set *nilpotent* s'il existe $k in NN tq f^k = 0$
+
+#prop() il y a équivalence entre
+- $f$ nilpotent
+- $chi_f = (-1)^n X^n$
+- $f^n = 0$
+- Il existe $p in NN tq pi_f = X^p$ ($p$ est le plus petit entier tq $f^p = 0$)\
+  $p$ s'appelle *indice de nilpotence* de $f$
+- $f$ trigonalisable avec des 0 sur la diagonale
+
+#def() Soit $f in LE et lambda$ une vp de $f$, de multiplicité algébrique $alpha$\
+Le *sous-espace caractéristique* de $lambda$ est 
+$ mu_lambda = ker ((f-lambda id_E)^lambda) $
+
+#thm() Soit $f in LE tq chi_f$ scindé\
+On note $lambda_1,...,lambda_m$ les valeurs propres de $f$, et $alpha_i = m^alpha (lambda_i)$ leurs multiplicités algébriques, alors
+- $mu_lambda_i$ stable par $f$
+- $E = plus.o.big_(i=0)^m mu_lambda_i$
+- $dim mu_lambda_i = alpha_i$
+
+#thm() Soit $f in LE$, on suppose $chi_f$ scindé, $lambda_1,...,lambda_m$ les vp de $f$, alors 
+$ pi_f = product_(i=1)^m (X-lambda_i)^(beta_i)\
+avec beta_i = Nil(f-lambda id_E) $
 
 #demo()[
 Soit $chi_f = (-1)^n product_(i=1)^m (X-lambda_i)^(alpha_i)$\
@@ -419,7 +467,7 @@ $P(A) = 0 imp P(A_i) = 0 pour i in [|1, m|]$\
 On suppose que $P = product_(i=1)^m (X-lambda_i)^(q_i)$\
 Pour tout $j in [|1, m|]$ on a $P(A_j) = product_(i=1)^m (A_j - lambda_i I_alpha_j)^(q_i)$
 
-#pagebreak()
+
 $P(A) &= mat(product_(i=1)^m (A_1 - lambda_i I_alpha_1)^(q_i), , 0; , dots.down, ; 0, , product_(i=1)^m (A_m - lambda_i I_alpha_m)^(q_i))\
 P(A) &= mat(product_(i = 1)^m A_(1, i)^(q_i), , 0; , dots.down, ; 0, , product_(i = 1)^m A_(m, i)^(q_i))$
 
@@ -435,7 +483,38 @@ Mais $p_i <= b_i$\
 Donc $p_i = b_i$
 ]
 
+#pagebreak()
+#ex()[
+$u in LE, B$ base de $E, A = Mat_B (u)$
+$ A = mat(-2,-3,-3,0;-2,-2,2,1;-2,-3,3,1;0,0,-1,2) $\
+$chi_A (X) &= det (A-X I_4)\
+&= (X+2)(X-1)^3$\
+$dim mu_(-2) = 1, dim mu_1 = 3$
 
+dp le thm, $pi_A = (X+2)(X-1)^beta$
+
+$mu_(-2) &= ker (A+2 Id_4)\
+&= Vect {v_1} = Vect {mat(1;1;1;0)}$
+
+$mu_1 &= Vect {v_2,v_3,v_4} = Vect{mat(1;0;1;0), mat(-1;1;0;0), mat(0;0;0;1)}$
+
+$B' = (v_1,v_2,v_3,v_4) "base de" E$
+
+Soit $g = (u - id_E)|_mu_1$
+
+$ g(v_2) = u(v_2) -id_E (v_2) = A v_1 - v_2 = 0\
+g(v_3) = -v_2-v_3-v_4\
+g(v_4) = v_2+v_3+v_4\
+donc Mat_{v_2,v_3,v_4}(g) = mat(0,-1,1;0,-1,1;0,-1,1) $
+
+$u != 0, u^2 = 0 donc beta = 2$\
+On obtient 
+$ pi_A = (X-1)(X-2)^2 $
+]
+
+
+
+#pagebreak()
 = VIII. Réduction
 
 #thm() Soit $f in LE$, les prop suivantes sont équivalentes 
@@ -555,7 +634,6 @@ $ P = (u_1|u_2|u_3) = mat(1, 0, 0; 0, 1, 0; -1, 0, 1) $
 Alors $A = P T Pm$
 ]
 
-#pagebreak()
 = IX. Décomposition de Dunford
 
 #thm() Soit $f in LE tq chi_f$ scindé.\ Alors il existe un unique couple $(d, n) in LE^2 tq $
@@ -623,6 +701,7 @@ $ f(v) &= sum_(i=1)^m f(v_i) = sum_(i=1)^m g_i (v_i)\
 &= sum_(i=1)^m d_i (v_i) + sum_(i=1)^m n_i (v_i)\
 &= d+n $
 
+#pagebreak()
 *4.*\
 $ (d rond n)(v) &= (d rond n)(v_1+...+v_m)\
 &= d(n_1(v_1)+ ...+n_m (v_m))\
@@ -710,6 +789,7 @@ $P = (u_1|u_2|u_3), T = mat(-1, 0, 0; 0, 2, -1; 0,0,2), A = P T Pm\
 T = D'+N' avec D' = mat(-1,0,0;0,2,0;0,0,2) et N' = mat(0,0,0;0,0,-1;0,0,0)$
 ]
 
+#pagebreak()
 = X. Applications au calcul des puissances d'une matrice
 
 Soit $A in Mn(K) et k in NN$\
