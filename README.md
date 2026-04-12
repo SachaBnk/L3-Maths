@@ -2,7 +2,7 @@
 
 Cours de Sacha 
 
-dit Stékachez : https://www.instagram.com/sacha_bnk 
+dit Stékachez : https://www.instagram.com/stekachez
 
 ou Kinks : https://www.supermajor.gg/ultimate/player/Kinks?id=S1930585
 
