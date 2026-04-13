@@ -31,16 +31,30 @@ Donc Cauchy-Lipschitz s'applique : $forall (t_0, x_0) in I times RR$ il existe u
 
 == 1. Cas homogène
 
-$ cases(X' = a(t)X, X(t_0) = x_0) $
+$ redstar : cases(X' = a(t)X, X(t_0) = x_0) $
 Si $x_0 = 0$ la fonction $X : t ass 0$ est la seule solution "évidente"\
 Si $x_0 != 0, alors forall t in I, X(t) != 0$
 
-= Rattraper
+- Si $x_0 = 0, alors $ la solution maximale est donnée explicitement par 
+$ forall t in I, X(t) = 0 $
+- Si $x_0 > 0$, alors pour tout $t in I : X(t) > 0$\
+  En effet s'il existait $t_1 in I tq X(t_1)<=0$, alors comme $X$ est continue, le  #lien("https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_des_valeurs_interm%C3%A9diaires")[théorème des valeurs intermédiaires] nous assurerait l'existence d'un temps $t_2$ entre $t_0 et t_1$ tq $X(t_2) = 0$, On aurait alors deux solutions distinctes au problème de Cauchy
+  $ cases(Y' = a(t)Y, Y(t_2)=0) $
+  (la fonction $X$ est la fonction nulle), ce qui contredit l'unicité du théorème de Cauchy-Lipschitz.
+
+Ainsi, si $x_0 !=0 alors : forall t in I, X(t) !=0$\
+On peut donc diviser par $X(t)$ :
+$ (X'(t))/X(t) = a(t) $
 
 #pagebreak()
+En intégrant entre $t_0 et t$, on obtient 
+$ ln((X'(t))/X(t)) = int_(t_0)^t a(u) du $
+En passant à l'exponentielle,
+$ forall t in I, X(t) = x_0 exp(int_(t_0)^t a(u)du) $
 
-#thm("(admis)") En toute dimension $d>=1$, si toutes les valeurs propres de $A$ ont une partie réelle strictement négative\
-alors $exists C > 0, exists gamma W> 0, forall x_0 in RRd, forall t in RR, norm(X(t)) <= C e^(- gamma t) norm(x_0)$
+*#underline("Conclusion :")* L'ensemble des solutions de $redstar$ est un espace vectoriel de dimension 1. En particulier 
+$ {X in C1(I,RR) | X' = a(t) X(t)} = Vect{t ass e^(int_(t_0)^t a(u)du)} $
+
 
 == 2. Cas non-homogène
 
@@ -65,7 +79,6 @@ $ sum_(i=1)^d (alpha'_i (t)X_i (t) + cancel(alpha_i (t) X_i '(t))) = cancel(sum_
 Et donc on a le système d'inconnues $(alpha_i'(t))_(1<=i<=d)$ $ sum_(i=1)^d alpha_i' (t)X_i (t) = B(t) "    "redstar $
 #def() 2 fonctions $x et y$ sont dites *liées* si $ exists alpha, beta in RR, alpha x + beta y = 0 $ Dans le cas contraire on dit que $x et y$ sont liées
 
-#pagebreak()
 #prop() Le système $redstar$ est bien inversible pour tout $t in I$\
 i.e. pour tout $t in RR$, la famille $(X_i (t))$ est libre dans $RR$
 
