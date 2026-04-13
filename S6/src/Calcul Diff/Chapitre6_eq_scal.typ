@@ -209,3 +209,7 @@ $ exists alpha, C > 0, forall x_0 in B(ol(x),r),forall t >=0, norm(X(t)-ol(x)) <
 On dit qu'il est *globalement exponentiellement stable* si $forall x_0 in Omega, sup J = pinf$ \
 et 
 $ exists alpha,C >0, forall x_0 in Omega, forall t >=0, norm(X(t)-ol(x)) <= C e^(-alpha t)norm(x_0-x) $
+
+#ex()[
+Si $xb$
+]
