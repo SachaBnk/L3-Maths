@@ -298,6 +298,7 @@
 #let LAMBDAPP = [$lambda$-presque partout]
 
 #let xb = $overline(x)$
+#let yb = $overline(y)$
 
 #let muint = $" "mu"-intégrable"$
 

@@ -198,9 +198,11 @@ $Omega subset RRd\
 I = RR$
 $ redstar : X' = f(X) $
 
+== 1. États d'équilibre et de stabilité
+
 #def() On dit qu'un point $ol(x) in Omega$ est un *point d'équilibre* pour l'équation $redstar$ si c'est un point singulier du champ de vecteur $f$\
 càd si $f(ol(x)) = 0$
-
+<les>
 #def() Un point d'équilibre $ol(x)$ est dit *localement exponentiellement stable* si\
 $exists r>0, forall x_0 in B(ol(x),r), sup J = pinf$\
 et 
@@ -211,5 +213,78 @@ et
 $ exists alpha,C >0, forall x_0 in Omega, forall t >=0, norm(X(t)-ol(x)) <= C e^(-alpha t)norm(x_0-x) $
 
 #ex()[
-Si $xb$
+Si $xb$ est localement stable, on a pour tout $t>=0$, $X(t)$ proche de $xb$\
+Posons $Y(t) = X(t)-xb$\
+$Y(t)$ est proche de 0 et
+$ Y'(t) = X'(t) &= f(X(t))\
+&= f(xb + Y(t))\
+&tilde.eq^"Taylor" f(xb) + Jac f(xb)Y(t) $
+
+On a donc $Y'(t) tilde.eq Jac f(xb)Y(t) in Mr_d (RR)$
 ]
+
+#pagebreak()
+<lyapunov>
+#thm("de linéarisation de Lyapunov") Si $xb in Omega$ est tel que $f(xb)=0$ et $Jac f(xb)$ a toutes ses valeurs propres de partie réelle strictement négative, alors $xb$ est un point d'équillibre #lien(<les>)[localement exponentiellement stable] 
+
+== 2. Équation de Lotka-Volterra
+
+On considère le problème de Cauchy suivant
+$ (E) : &cases(x' = a x - b x y, y' = -c y + d x y), a,b,c,d>0\
+"ou encore" &cases(x' = (a-b y)x, y' = (-c + d x)y) $
+
+$ avec X(t) = mat(x(t);y(t)), X(0) = mat(x_0;y_0)\
+f mat(x;y) = mat(a x - b x y; -c y + d x y), f in C1(RR2, RR2) $
+
+$x(t)$ : "quantité" de proies au temps $t$\
+$y(t)$ : "quantité" de prédateurs au temps $t$
+\ \
+*Regardons ce qui se passe si $x_0=0, y_0 in RR$*\
+La solution maximale est globale, donnée par
+$ forall t in RR, &x(t) = 0\
+&y(t) = y_0 e^(-c t) $
+
+*De la même manière, si $y_0 = 0, x in RR$*\
+alors la solution maximale (et globale) est donnée par 
+$ forall t in RR, X(t) = mat(x(t);y(t)) = mat(x_0 e^(a t); 0) $
+
+En particulier $mat(0;0)$ est un point d'équilibre $(f mat(0;0) = mat(0;0))$, càd que son orbite est réduite à $mat(0;0)$ : $O(0,0) = {(0,0)}$. On en déduit également que 
+$ O(0,1)= {0}times ]0,pinf[\
+O(0,-1) = {0} times ]minf,0[\
+O(1,0) = ]0,pinf[ times {0}\
+O(-1,0) = ]minf, 0[ times {0} $
+
+#pagebreak()
+*Soit $x_0 >0, y_0>0$*\
+Alors $forall t in J, x(t) >0 et y(t)>0$.\ 
+En effet supposons qu'il existe $t_0 in J tq x(t_0) <= 0$, alors par le thm des valeurs intermédiaires, il existe $t_1$ entre $t_0 et 0$ tq $x(t_1)=0$
+$ "càd" X(t_1) = mat(x(t_1);y(t_1)) in {0} times RR $
+${0} times RR &= {0} times ]0,pinf[ union {(0,0)} union {0} times ]minf,0[\
+&= O(0,1) union O(0,0) union O(1,0)$\
+Or $(x_0,y_0) in.not O(0,1) union O(0,0) union O(1,0)$ $->$ contradiction
+
+L'ensemble $Q = {mat(x;y) in RR2 | x>0 et y>0}$ est donc stable pour l'équation $(E)$, et on peut donc considérer l'équation posée sur $Omega = Q$
+
+*1re question : _Existe-t-il un état d'équilibre dans $QQ$ ?_*
+
+$ cases(xb(a-b yb) &= 0, yb(-c + d xb) &= 0) $
+Comme $xb != 0, alors a-b yb = 0, donc yb = a/b$
+
+Comme $yb != 0, alors -c + d xb = 0, donc xb = c/d$
+
+*2e question : _Est-il localement exponentiellement stable_*\
+_(Indication : On est en dim 2 donc la matrice $Jac f(xb, yb$ a ses valeurs propres de partie réelle < 0 ssi $det Jac f(xb,yb) > 0$ *et* $tr Jac f (xb,yb) < 0$)_
+
+$Jac f(x,y) = mat(a-b y , -b x; d y, -c + d x)$
+
+$donc Jac f(xb,yb) &= mat(a-b a/b, -b c/d; d a/b, -c + d c/d)\
+&= mat(0, -(b c)/d; (d a)/b, 0)$
+
+#rq() Les valeurs propres sont complexes conjuguées et leur somme est nulle, donc ces valeurs propres sont imaginaires pures, on ne peut pas appliquer le #lien(<lyapunov>)[thm de linéarisation de Lyapunov]
+
+#rq() Soit $H(x,y) = -c ln x + d x - a ln y + b y$\
+On a la propriété remarquable que si $X' = f(X) dans Q$, alors la fonction
+$ Phi : t ass H(x(t),y(t)) $
+est constante $(Phi'(t) = 0)$
+
+
