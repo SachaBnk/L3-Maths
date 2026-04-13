@@ -297,6 +297,7 @@
 #let lambdapp = $lambda p p$
 #let LAMBDAPP = [$lambda$-presque partout]
 
+#let xb = $overline(x)$
 
 #let muint = $" "mu"-intégrable"$
 
