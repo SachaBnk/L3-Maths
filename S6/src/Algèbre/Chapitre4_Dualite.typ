@@ -426,7 +426,7 @@ $ chi_A (A) = 0 $
 
 #def() Soit $f in LE et lambda$ une vp de $f$, de multiplicité algébrique $alpha$\
 Le *sous-espace caractéristique* de $lambda$ est 
-$ N_lambda = ker ((f-lambda id_E)^lambda) $
+$ N_lambda = ker ((f-lambda id_E)^alpha) $
 
 #thm() Soit $f in LE tq chi_f$ scindé\
 On note $lambda_1,...,lambda_m$ les valeurs propres de $f$, et $alpha_i = m^alpha (lambda_i)$ leurs multiplicités algébriques, alors
