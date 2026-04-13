@@ -797,7 +797,7 @@ Si $chi_A$ est scindé, alors $A = D+N$ avec $D$ diagonale, $N$ nilpotente et $N
 
 $Soit p = Nil(N)$
 
-$ A &=^(D N = N D) sum_(i=0)^k mat(k;i)N^i D^(k-i)\
+$ A^k &=^(D N = N D) sum_(i=0)^k mat(k;i)N^i D^(k-i)\
 &= sum_(i=0)^(p-1) mat(k;i) N^i D^(k-i) $
 $D = P D' Pm avec D'$ diagonale\
 Donc $D^i = P (D')^i Pm$
