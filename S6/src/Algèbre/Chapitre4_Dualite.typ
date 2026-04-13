@@ -426,13 +426,13 @@ $ chi_A (A) = 0 $
 
 #def() Soit $f in LE et lambda$ une vp de $f$, de multiplicité algébrique $alpha$\
 Le *sous-espace caractéristique* de $lambda$ est 
-$ mu_lambda = ker ((f-lambda id_E)^lambda) $
+$ N_lambda = ker ((f-lambda id_E)^lambda) $
 
 #thm() Soit $f in LE tq chi_f$ scindé\
 On note $lambda_1,...,lambda_m$ les valeurs propres de $f$, et $alpha_i = m^alpha (lambda_i)$ leurs multiplicités algébriques, alors
-- $mu_lambda_i$ stable par $f$
-- $E = plus.o.big_(i=0)^m mu_lambda_i$
-- $dim mu_lambda_i = alpha_i$
+- $N_lambda_i$ stable par $f$
+- $E = plus.o.big_(i=0)^m N_lambda_i$
+- $dim N_lambda_i = alpha_i$
 
 #thm() Soit $f in LE$, on suppose $chi_f$ scindé, $lambda_1,...,lambda_m$ les vp de $f$, alors 
 $ pi_f = product_(i=1)^m (X-lambda_i)^(beta_i)\
@@ -489,18 +489,18 @@ $u in LE, B$ base de $E, A = Mat_B (u)$
 $ A = mat(-2,-3,-3,0;-2,-2,2,1;-2,-3,3,1;0,0,-1,2) $\
 $chi_A (X) &= det (A-X I_4)\
 &= (X+2)(X-1)^3$\
-$dim mu_(-2) = 1, dim mu_1 = 3$
+$dim N_(-2) = 1, dim N_1 = 3$
 
 dp le thm, $pi_A = (X+2)(X-1)^beta$
 
-$mu_(-2) &= ker (A+2 Id_4)\
+$N_(-2) &= ker (A+2 Id_4)\
 &= Vect {v_1} = Vect {mat(1;1;1;0)}$
 
-$mu_1 &= Vect {v_2,v_3,v_4} = Vect{mat(1;0;1;0), mat(-1;1;0;0), mat(0;0;0;1)}$
+$N_1 &= Vect {v_2,v_3,v_4} = Vect{mat(1;0;1;0), mat(-1;1;0;0), mat(0;0;0;1)}$
 
 $B' = (v_1,v_2,v_3,v_4) "base de" E$
 
-Soit $g = (u - id_E)|_mu_1$
+Soit $g = (u - id_E)|_N_1$
 
 $ g(v_2) = u(v_2) -id_E (v_2) = A v_1 - v_2 = 0\
 g(v_3) = -v_2-v_3-v_4\
