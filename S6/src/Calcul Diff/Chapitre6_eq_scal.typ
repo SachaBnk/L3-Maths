@@ -32,8 +32,6 @@ Donc Cauchy-Lipschitz s'applique : $forall (t_0, x_0) in I times RR$ il existe u
 == 1. Cas homogène
 
 $ redstar : cases(X' = a(t)X, X(t_0) = x_0) $
-Si $x_0 = 0$ la fonction $X : t ass 0$ est la seule solution "évidente"\
-Si $x_0 != 0, alors forall t in I, X(t) != 0$
 
 - Si $x_0 = 0, alors $ la solution maximale est donnée explicitement par 
 $ forall t in I, X(t) = 0 $
@@ -75,7 +73,7 @@ Pour trouver une solution particulière, on peut appliquer la méthode de la var
 En injectant cette expression dans l'équation $X' = A(t)X + B(t)$ on obtient 
 $ sum_(i=1)^d (alpha'_i (t)X_i (t) + cancel(alpha_i (t) X_i '(t))) = cancel(sum_(i=1)^d alpha_i (t)A(t)X_i (t)) + B(t) $
 
-#text(gray)[Car $X_i' (t) = A(t)X_i (t)$]\
+#text(gray)[Car $X'_i (t) = A(t)X_i (t)$]\
 Et donc on a le système d'inconnues $(alpha_i'(t))_(1<=i<=d)$ $ sum_(i=1)^d alpha_i' (t)X_i (t) = B(t) "    "redstar $
 #def() 2 fonctions $x et y$ sont dites *liées* si $ exists alpha, beta in RR, alpha x + beta y = 0 $ Dans le cas contraire on dit que $x et y$ sont liées
 
