@@ -2,7 +2,7 @@
 #show math.equation.where(block: false): math.display
 #set page(numbering: "1 / 1", number-align: right)
 #set par(justify: true)
-#import "../../titres.typ": *
+#import "../titres.typ": *
 #align(center, text(20pt)[*Calcul Différentiel*])
 #align(center, text(15pt)[Intro : Rappels de Topologie]) \
 #show outline.entry.where(level: 1): it => {

@@ -2,7 +2,7 @@
 #show math.equation.where(block: false): math.display
 #set page(numbering: "1 sur 1", number-align: center)
 #set par(justify: true, spacing: 1.5em)
-#import "../../../titres.typ": *
+#import "../titres.typ": *
 #align(center, text(20pt)[*Préparation CAPES*])
 #align(center, text(15pt)[Oral Belaud]) \
 

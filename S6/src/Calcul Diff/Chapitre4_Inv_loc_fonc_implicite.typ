@@ -2,7 +2,7 @@
 #show math.equation.where(block: false): math.display
 #set page(numbering: "1 sur 1", number-align: center)
 #set par(justify: true)
-#import "../../titres.typ": *
+#import "../titres.typ": *
 #align(center, text(20pt)[*Calcul Différentiel*])
 #align(center, text(15pt)[Chapitre 4 : Inversion locale et fonctions implicites]) \
 #show outline.entry.where(level: 1): it => {

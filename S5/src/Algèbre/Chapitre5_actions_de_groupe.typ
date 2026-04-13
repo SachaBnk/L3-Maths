@@ -2,7 +2,7 @@
 #show math.equation.where(block: false): math.display
 #set page(numbering: "1 / 1", number-align: right)
 #set par(justify: true)
-#import "../../titres.typ": *
+#import "../titres.typ": *
 
 #align(center, text(20pt)[*Algèbre*])
 #align(center, text(15pt)[Chapitre 5 — Actions de groupes])

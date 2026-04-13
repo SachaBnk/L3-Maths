@@ -4,7 +4,7 @@
 
 
 #set par(justify: true)
-#import "../../titres.typ": *
+#import "../titres.typ": *
 #align(center, text(20pt)[*Calcul Différentiel*])
 #align(center, text(15pt)[Chapitre 6 - Équations scalaires]) \
 #show outline.entry.where(level: 1): it => {
