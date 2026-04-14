@@ -4,7 +4,7 @@
 #set par(justify: true)
 #import "../titres.typ": *
 #align(center, text(20pt)[*Calcul Différentiel*])
-#align(center, text(15pt)[Chapitre 5]) \
+#align(center, text(15pt)[Chapitre 5 -- Introduction aux équations différentielles]) \
 #show outline.entry.where(level: 1): it => {
   v(12pt)
   strong(it)
@@ -12,8 +12,37 @@
 #text(1.3em)[#outline(title : "")]
 #pagebreak()
 
-= Rattraper
+= I. Théorie générale, existence, unicité
+
+On s'interesse à des équations différentielles d'ordre 1 dans $RRd$, càd des équations du type
+$ X'(t) = f(t, X(t)) $
+où l'inconnue est $X$, et $f : I times Omega --> RRE$ est un champ de vecteurs donné sur $I times Omega$ avec $I$ un intervalle ouvert et $Omega$ un ouvert de $RRd$. On supposera toujours $f$ continue.
+
+#def() On appelle *solution* de l'équation différentielle $X' = f(t,X)$, toute fonction $X$ de classe $C1$ sur un intervalle $J subset I$ et à valeurs dans $Omega$, qui satisfait 
+$ forall t in J, X'(t) = f(t,X(t)) $
+
+#rq("importante") L'équation $X' = f(t,X)$ est équivalente à la forme intégrale :
+$ X(t) = X(t_0)+int_(t_0)^t f(s,X(s))d s $
+où $t_0$ est fixé.
+
+#lemme("de Grönwall") Soient $u,a,b$ trois fonctions continues sur un intervalle $[t_0,t_1]$ à valeurs réelles. Si la fonction *$a$ est positive* et que
+$ forall t in [t_0,t_1], u(t) <= b(t) + int_(t_0)^t a(s)u(s)d s $ 
+alors
+$ forall t in [t_0,t_1], u(t) <= b(t) + int_(t_0)^t a(s)b(s) e^(int_s^t a(s')d s')d s $
+
+#demo()[
+celene
+]
 #pagebreak()
+#rq() Si $a$ et $b$ sont des fonctions constantes, alors le resultat s'écrit :\
+Si
+$ forall t in [t_0,t_1], u(t) <= b+a int_(t_0)^t u(s) d s $
+alors
+$ forall t in [t_0,t_1], u(t) &<= b + b int_(t_0)^t a e^((t-s))d s\
+&<= ...\
+u(t) &<= b e^(a (t-t_0)) $
+
+
 = II. Théorème de Cauchy-Lipschitz
 
 #def() On appelle *problème de Cauchy* le système déquations,\ pour $f in Cr(I times Omega, RR^d) et X in C1(J, Omega), J subset I$
@@ -47,7 +76,6 @@ avec $L = sup_(0<=s<=1) norm(df(s x+(1-s)y))_(Lr(RR^(d+1), RR^d)) > 0$
   avec $J = [t_0-tau, t_0+tau]$
 - si $X_1, X_2$ sont deux solutions de $(C)$ sur les intervalles $J_1 et J_2$ respectivement, alors $forall t in J_1 inter J_2, X_1(t)=X_2(t)$
 
-#pagebreak()
 = III. Solutions maximales, solutions globales et orbites
 
 #def("(de merde)") $Si X_1 in C1(J_1, Omega) et X_2 in C1(J_2, Omega)$ Sont deux solutions de $(C)$, on peut définir une troisième $X_3 in C1(J_1 union J_2, Omega)$ en posant $X_3 : t ass cases(X_1 (t) si t in J_1, X_2(t) si t in J_2)$, cette solution est bien définie par le ii) du thm de #lien(<cau-lip>)[Cauchy-Lipschitz]\
