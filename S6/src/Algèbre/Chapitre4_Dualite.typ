@@ -186,7 +186,7 @@ De plus :
 #prop() $B subset ED$\
 $T(B^rond) = B^bot$
 
-#rappel : #lien(<T>)[T]
+#rappel() #lien(<T>)[T]
 
 #corollaire() $Soit A subset E, (A^bot)^bot = T((A^bot)^rond)$
 
@@ -289,7 +289,7 @@ $ F = {(x,y,z)in RR^3 | y=2x et x=z} $
 
 D'autre part :\
 ${u_1,u_2}^bot = Vect{u_3^*} = Vect{-e_1^*+e_3^*}$
-$ G = {(x,y,z)in RR^3 | x = z} $
+$ G = {(x,y,z)in RR^3 | x = -z} $
 ]
 
 #rappel() Soit $A subset E$ sous ensemble et $(e_1,...,e_p)$ une base de $Vect(A)$\

@@ -18,7 +18,7 @@
 
 #def() $K$ corps, $E$ ensemble muni 
 - d'une loi interne " $+$"$: E times E --> E$
-- d'une loioi externe "$dot$" $: K times E --> E$\
+- d'une loi externe "$dot$" $: K times E --> E$\
 E est un *espace vectoriel* sur $K$, ou $K$-ev si 
 - $(E, +)$ groupe commutatif
 - $lambda dot (x+y) = lambda x + lambda y$
