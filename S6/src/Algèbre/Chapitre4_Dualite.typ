@@ -153,7 +153,7 @@ $scal(" ", " ") : func(ED times E &--> K, (Phi, x) &ass Phi(x))$
 
 #thm() Soit $B' = (Phi_1, ..., Phi_n)$ une base de $ED$\
 Alors il existe une unique base $B de E$ dont $B'$ est la duale\
-On appelle $B$ la *base antéduale* de $B'$
+On appelle $B$ la *base antéduale* de $B'$ (ou *base préduale*)
 #let Tm = $T^(-1)$
 
 #demo()[
