@@ -171,7 +171,22 @@ De plus :
 ...
 ]
 
+#ex()[
+On considère la famille de vecteurs suivante de $(RR^3)^*$
+$ cases(phi_1 = &x + 2&y + 3&z, phi_2 = 2&x + 3&y + 4&z, phi_3 = 3&x+ 4&y + 6&z) $
+On note $Fr = (phi_1,phi_2,phi_3)$\
+On peut écrire dans la base $B_0 = (e_1^*, e_2^*, e_3^*)$ la famille $Fr$ sous forme matricielle
+$ Q = (phi_1,phi_2,phi_3) = mat(1,2,3;2,3,4;3,4,6) $
+$Q$ est inversible donc $Fr$ est une base de $(RR^3)^*$, On note $B = (v_1,v_2,v_3)$ la base antéduale de $Fr$.
 #pagebreak()
+ La matrice de passage de $B_0$ à $B$ est donc 
+$ (Qm)^T = mat(-2,0,1;0,3,-2;1,-2,1) $
+On conclut :
+$ v_1 = (-2,0,1) ; v_2 = (0,3,-2) ; v_3 = (1,-2,1) $ 
+
+
+]
+
 = IV. Orthogonalité
 
 #def() Soit $A subset E$ sev\
@@ -245,10 +260,10 @@ $ dim (F^bot + (F')^bot) &= dim(F^bot)+dim((F')^bot)-dim(F^bot inter (F')^bot)\
 &= 2n - dim(F) - dim(F') - n + dim(F+F')\
 &= n - cancel(dim(F)) - cancel(dim(F')) + cancel(dim(F)) + cancel(dim(F')) - dim(F inter F')\
 &= n-dim(F+F') = dim((F+F')^bot) $
-
+#pagebreak()
 #rappel() $ T : func(E &-->^tilde (E^*)^*, x &ass func(E^* &-->K, Phi &ass Phi(x))) $
 $B subset ED, T(B) = B^bot ssi B° = Tm(B^bot)$
-#pagebreak()
+
 *2.a)*\
 $ (G+G')° &= Tm((G + G')^bot)\
 &= Tm(G^bot inter (G')^bot)\
@@ -279,7 +294,6 @@ Donc $B^* = (e_1^*, -2e_1^*+e_2^*, -e_1^*+e_3^*)$\
 ${u_1}^bot = Vect{u_2^*,u_3^*} = Vect{-2e_1^*+e_2^*, -e_1^*+e_3^*}$
 
 $ F = {(x,y,z) in RR^3 | u_2^*(x,y,z)=0 et u_3^*(x,y,z)=0} $
-#pagebreak()
 Mais 
 $ u_2^*(x,y,z) &= u_2^*(x e_1+y e_2+z e_3)\
 &= -2e_1^*(x e_1+y e_2 + z e_3) + e_2^*(x e_1 + y e_2 + z e_3)\
@@ -315,7 +329,7 @@ On note
 #demo()[
   Celene
 ]
-
+#pagebreak()
 #thm("- Lemme des noyaux") Soit $f in LE, et  P_1, ..., P_k in KX$ premiers entre eux deux a deux. Posons $P = P_1...P_k$, alors 
 $ ker P(f) = plus.o.big_(i=1)^k ker (P_i (f)) $
 
