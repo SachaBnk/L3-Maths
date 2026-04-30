@@ -1,4 +1,4 @@
-# L3-Maths, L3 option CAPES 2025-2026
+# L3 Maths, option CAPES 2025-2026
 
 Cours de Sacha 
 
