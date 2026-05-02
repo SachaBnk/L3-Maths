@@ -1,6 +1,6 @@
 # L3 Maths, option CAPES 2025-2026
 
-## Cours de Sacha - avec l'aide de Julia, Marceau et Naël 💪
+## Cours de Sacha —— avec l'aide de Julia, Marceau et Naël 💪
 
 dit Stékachez : https://www.instagram.com/stekachez
 
