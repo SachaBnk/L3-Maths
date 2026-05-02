@@ -2,7 +2,7 @@
 
 ## Cours de Sacha — avec l'aide de Julia, Marceau et Naël 💪
 
-Contect :
+**Contact :**
 
 @stekachez : https://www.instagram.com/stekachez
 
