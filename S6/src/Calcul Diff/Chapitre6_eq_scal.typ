@@ -171,7 +171,7 @@ $ X' = mat(0,1;-2,3)X+mat(0;t) $
 Sous la forme 
 $ X_p (t) = alpha_1(t)Z_1 (t) + alpha_2(t) Z_2(t) $
 En injectant (Yves Belaud en sueur) cette forme dans $(E)$, on obtient 
-$ X_p'(t) = mat(0,1;-2,3) X_p (t) + mat(0;t) $
+$ X'_p (t) = mat(0,1;-2,3) X_p (t) + mat(0;t) $
 ou encore
 $ alpha'_1(t) Z_1(t) + cancel(alpha_1(t)Z'_1(t)) + alpha_2(t)Z_2(t) + cancel(alpha_2(t)Z_2'(t))\ \
 =\
