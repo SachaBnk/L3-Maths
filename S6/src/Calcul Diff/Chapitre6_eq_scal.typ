@@ -136,7 +136,7 @@ On en déduit de l'étude des systèmes linéaires sans second membre que :
 + Si $a^2 - 4 b = 0$, il existe une racine double $lambda in RR$ et les solutions de $(E_0)$ s'écrivent 
   $ x(t) = (alpha_1 + alpha_2 t)e^(lambda t)"    "(alpha_1, alpha_2 in RR) $
 
-+ Si $a^2-4b < 0$, deux solutions complexes conjuguées $lambda = mu pm i omega$, et les solutions de $(E_0)$ s'écrivent
++ Si $a^2-4b < 0$, deux racines complexes conjuguées $lambda = mu pm i omega$, et les solutions de $(E_0)$ s'écrivent
 $ x(t) = e^(mu t)(alpha_1 cos(omega t) + alpha_2 sin(omega t))"    "(alpha_1,alpha_2 in RR) $
 
 #pagebreak()
