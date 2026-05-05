@@ -88,7 +88,7 @@ $ X = 0,\
 i.e.forall t in I, sum_(i=1)^d alpha_i X_i (t) = 0 $ Or la famille $(X_i)_(1, <= i<=d)$ est libre dans $C1(I, RRd)$, donc on a $forall i in [|1, d|], alpha_i = 0$
 ]
 
-Finalement, en résolvant le système de Cramer $redstar$, on obtient $alpha_i'(t)$ pour tout\ $i in [|1, d|]$ et pour tout $t in I$. On en déduit les fonctions $alpha_i$ en primitivant $alpha_i'$.
+Finalement, en résolvant le système de Cramer $redstar$, on obtient $alpha'_i(t)$ pour tout\ $i in [|1, d|]$ et pour tout $t in I$. On en déduit les fonctions $alpha_i$ en primitivant $alpha'_i$.
 
 
 #pagebreak()
