@@ -75,7 +75,7 @@ $ sum_(i=1)^d (alpha'_i (t)X_i (t) + cancel(alpha_i (t) X_i '(t))) = cancel(sum_
 
 #text(gray)[Car $X'_i (t) = A(t)X_i (t)$]\
 Et donc on a le système d'inconnues $(alpha_i'(t))_(1<=i<=d)$ $ sum_(i=1)^d alpha_i' (t)X_i (t) = B(t) "    "redstar $
-#def() 2 fonctions $x et y$ sont dites *liées* si $ exists alpha, beta in RR, alpha x + beta y = 0 $ Dans le cas contraire on dit que $x et y$ sont liées
+#def() 2 fonctions $x et y$ sont dites *liées* si $ exists alpha, beta in RR, alpha x + beta y = 0 $ Dans le cas contraire on dit que $x et y$ sont *libres*
 
 #prop() Le système $redstar$ est bien inversible pour tout $t in I$\
 i.e. pour tout $t in RR$, la famille $(X_i (t))$ est libre dans $RR$
