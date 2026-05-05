@@ -214,6 +214,7 @@ $ redstar : X' = f(X) $
 #def() On dit qu'un point $ol(x) in Omega$ est un *point d'équilibre* pour l'équation $redstar$ si c'est un point singulier du champ de vecteur $f$\
 càd si $f(ol(x)) = 0$
 <les>
+
 #def() Un point d'équilibre $ol(x)$ est dit *localement exponentiellement stable* si\
 $exists r>0, forall x_0 in B(ol(x),r), sup J = pinf$\
 et 
