@@ -68,7 +68,7 @@ Alors on sait que toute solution de cette equation homogène s'écrit $ X(t) = s
 On sait alors, pour les memes raisons que dans le cas scalaire (d = 1), que les solutions de l'équation avec second membre s'écrivent $X(t) = Z(t)+X_p (t)$, avec $Z$ solution de $Z' = A(t)Z$, et $X_p$ une solution particulière de l'équation avec second membre.
 
 *Méthode de la variation des constantes*\
-Pour trouver une solution particulière, on peut appliquer la méthode de la variation des constantes qui consiste à chercher $X_p$ sous la forme $ X_P (t) = sum_(i=1)^d alpha_i (t) X_i (t) $
+Pour trouver une solution particulière, on peut appliquer la méthode de la variation des constantes qui consiste à chercher $X_p$ sous la forme $ X_p (t) = sum_(i=1)^d alpha_i (t) X_i (t) $
 
 En injectant cette expression dans l'équation $X' = A(t)X + B(t)$ on obtient 
 $ sum_(i=1)^d (alpha'_i (t)X_i (t) + cancel(alpha_i (t) X_i '(t))) = cancel(sum_(i=1)^d alpha_i (t)A(t)X_i (t)) + B(t) $
