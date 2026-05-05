@@ -46,7 +46,7 @@ $ (X'(t))/X(t) = a(t) $
 
 #pagebreak()
 En intégrant entre $t_0 et t$, on obtient 
-$ ln((X'(t))/X(t)) = int_(t_0)^t a(u) du $
+$ ln(X(t)) = int_(t_0)^t a(u) du $
 En passant à l'exponentielle,
 $ forall t in I, X(t) = x_0 exp(int_(t_0)^t a(u)du) $
 
