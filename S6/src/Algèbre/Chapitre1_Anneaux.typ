@@ -412,7 +412,7 @@ La classe de $(a, b)$ est notée $a/b$
 $A$ intègre, $K$ corps\
 $Soit alpha : A --> K$ morphisme d'anneaux injectif\
 alors il existe un *unique* morphisme de corps (injectif donc) $Phi : Frac A --> K$\
-$tq phi rond i = alpha$
+$tq Phi rond i = alpha$
 
 #demo()[
 *Unicité*\
@@ -425,7 +425,7 @@ $Phi(a/b) &= Phi(a/1_A dot 1_A/b)\
 &= (Phi rond i)(a) dot [(Phi rond i)(b)]^(-1)\
 &= alpha(a) dot alpha(b)^(-1)$
 #pagebreak()
-*eXistenZ*
+*Existence*
 
 Soit $Phi : func(Frac A &--> K, a/b &ass alpha(a)dot alpha(b)^(-1))$
 
