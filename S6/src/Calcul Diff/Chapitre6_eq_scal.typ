@@ -46,7 +46,7 @@ $ (X'(t))/X(t) = a(t) $
 
 #pagebreak()
 En intégrant entre $t_0 et t$, on obtient 
-$ ln((X'(t))/X(t)) = int_(t_0)^t a(u) du $
+$ ln(X(t)) = int_(t_0)^t a(u) du $
 En passant à l'exponentielle,
 $ forall t in I, X(t) = x_0 exp(int_(t_0)^t a(u)du) $
 
@@ -65,17 +65,17 @@ $Omega = RRd$
 Supposons qu'on connaisse $d$ solutions linéairement indépendantes $X_1, ..., X_d$ du système homogène $X' = A(t)X$\
 Alors on sait que toute solution de cette equation homogène s'écrit $ X(t) = sum_(i=1)^d alpha_i X_i (t) $
 
-On sait alors, pour les memes raisons que dans le cas scalaire (d = 1), que les solutions de l'équation avec second membre s'écrivent $X(t) = Z(t)+X_p (t)$, avec $Z$ solution de de $Z' = A(t)Z$, et $X_p$ une solution particulière de l'équation avec second membre.
+On sait alors, pour les memes raisons que dans le cas scalaire (d = 1), que les solutions de l'équation avec second membre s'écrivent $X(t) = Z(t)+X_p (t)$, avec $Z$ solution de $Z' = A(t)Z$, et $X_p$ une solution particulière de l'équation avec second membre.
 
 *Méthode de la variation des constantes*\
-Pour trouver une solution particulière, on peut appliquer la méthode de la variation des constantes qui consiste à chercher $X_p$ sous la forme $ X_P (t) = sum_(i=1)^d alpha_i (t) X_i (t) $
+Pour trouver une solution particulière, on peut appliquer la méthode de la variation des constantes qui consiste à chercher $X_p$ sous la forme $ X_p (t) = sum_(i=1)^d alpha_i (t) X_i (t) $
 
 En injectant cette expression dans l'équation $X' = A(t)X + B(t)$ on obtient 
 $ sum_(i=1)^d (alpha'_i (t)X_i (t) + cancel(alpha_i (t) X_i '(t))) = cancel(sum_(i=1)^d alpha_i (t)A(t)X_i (t)) + B(t) $
 
 #text(gray)[Car $X'_i (t) = A(t)X_i (t)$]\
 Et donc on a le système d'inconnues $(alpha_i'(t))_(1<=i<=d)$ $ sum_(i=1)^d alpha_i' (t)X_i (t) = B(t) "    "redstar $
-#def() 2 fonctions $x et y$ sont dites *liées* si $ exists alpha, beta in RR, alpha x + beta y = 0 $ Dans le cas contraire on dit que $x et y$ sont liées
+#def() 2 fonctions $x et y$ sont dites *liées* si $ exists alpha, beta in RR, alpha x + beta y = 0 $ Dans le cas contraire on dit que $x et y$ sont *libres*
 
 #prop() Le système $redstar$ est bien inversible pour tout $t in I$\
 i.e. pour tout $t in RR$, la famille $(X_i (t))$ est libre dans $RR$
@@ -88,7 +88,7 @@ $ X = 0,\
 i.e.forall t in I, sum_(i=1)^d alpha_i X_i (t) = 0 $ Or la famille $(X_i)_(1, <= i<=d)$ est libre dans $C1(I, RRd)$, donc on a $forall i in [|1, d|], alpha_i = 0$
 ]
 
-Finalement, en résolvant le système de Cramer $redstar$, on obtient $alpha_i'(t)$ pour tout\ $i in [|1, d|]$ et pour tout $t in I$. On en déduit les fonctions $alpha_i$ en primitivant $alpha_i'$.
+Finalement, en résolvant le système de Cramer $redstar$, on obtient $alpha'_i(t)$ pour tout\ $i in [|1, d|]$ et pour tout $t in I$. On en déduit les fonctions $alpha_i$ en primitivant $alpha'_i$.
 
 
 #pagebreak()
@@ -136,7 +136,7 @@ On en déduit de l'étude des systèmes linéaires sans second membre que :
 + Si $a^2 - 4 b = 0$, il existe une racine double $lambda in RR$ et les solutions de $(E_0)$ s'écrivent 
   $ x(t) = (alpha_1 + alpha_2 t)e^(lambda t)"    "(alpha_1, alpha_2 in RR) $
 
-+ Si $a^2-4b < 0$, deux solutions complexes conjuguées $lambda = mu pm i omega$, et les solutions de $(E_0)$ s'écrivent
++ Si $a^2-4b < 0$, deux racines complexes conjuguées $lambda = mu pm i omega$, et les solutions de $(E_0)$ s'écrivent
 $ x(t) = e^(mu t)(alpha_1 cos(omega t) + alpha_2 sin(omega t))"    "(alpha_1,alpha_2 in RR) $
 
 #pagebreak()
@@ -171,9 +171,9 @@ $ X' = mat(0,1;-2,3)X+mat(0;t) $
 Sous la forme 
 $ X_p (t) = alpha_1(t)Z_1 (t) + alpha_2(t) Z_2(t) $
 En injectant (Yves Belaud en sueur) cette forme dans $(E)$, on obtient 
-$ X_p'(t) = mat(0,1;-2,3) X_p (t) + mat(0;t) $
+$ X'_p (t) = mat(0,1;-2,3) X_p (t) + mat(0;t) $
 ou encore
-$ alpha'_1(t) Z_1(t) + cancel(alpha_1(t)Z'_1(t)) + alpha_2(t)Z_2(t) + cancel(alpha_2(t)Z_2'(t))\ \
+$ alpha'_1(t) Z_1(t) + cancel(alpha_1(t)Z'_1(t)) + alpha'_2(t)Z_2(t) + cancel(alpha_2(t)Z'_2(t))\\
 =\
 cancel(alpha_1(t) mat(0,1;-2,3)Z_1(t)) + cancel(alpha_2(t)mat(0,1;-2,3))Z_2(t) + mat(0;t) $
 \
@@ -214,6 +214,7 @@ $ redstar : X' = f(X) $
 #def() On dit qu'un point $ol(x) in Omega$ est un *point d'équilibre* pour l'équation $redstar$ si c'est un point singulier du champ de vecteur $f$\
 càd si $f(ol(x)) = 0$
 <les>
+
 #def() Un point d'équilibre $ol(x)$ est dit *localement exponentiellement stable* si\
 $exists r>0, forall x_0 in B(ol(x),r), sup J = pinf$\
 et 
