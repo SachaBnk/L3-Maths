@@ -52,7 +52,7 @@ D'après le cours, l'ensemble des solutions de $(E)$ est la droite affine $ Sr &
 &= {x ass phi(x) + C e^x/x | C in RR}\
 &= {x ass (C e^x -1)/x | C in RR} $
 #pagebreak()
-#rq() Belaud aime bien la notation "$phi + Sr_0$", elle est bien définie mathématiquement, soit comme "somme de Minkowski" (on somme deux ensembles, on sous entend "${phi}+Sr_0$"), soit comme action de groupe (mais c'est plus dangereux, il faut pouvoir expliquer ce que c'est, c'est chaud)
+#rq() M. Belaud aime bien la notation "$phi + Sr_0$", elle est bien définie mathématiquement, soit comme "somme de Minkowski" (on somme deux ensembles, on sous entend "${phi}+Sr_0$"), soit comme action de groupe (mais c'est plus dangereux, il faut pouvoir expliquer ce que c'est, c'est chaud)
 
 ===
 Sur $RRPE$ on avait l'ensemble 
