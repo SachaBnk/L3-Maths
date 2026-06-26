@@ -6,7 +6,7 @@
 \ \
 *1.* Énoncer le théorème de Rolle
 
-*2.* Énoncer le théorème dees accroissements finis
+*2.* Énoncer le théorème des accroissements finis
 
 *3.* Énoncer l'inégalité des accroissements finis, puis proposer une interprétation graphique
 
@@ -26,7 +26,7 @@ $"   "$d. En déduire que $(u_n)$ converge et donner sa limite
 
 *5.* Soit $g : [a, b] --> [a, b]$ continue sur $[a,b]$, dérivable sur $]a,b[$
 
-$"   "$a) Prouver que $f$ admet un point fixe sur $[a,b]$
+$"   "$a) Prouver que $g$ admet un point fixe sur $[a,b]$
 
 $"   "$b) On suppose qu'il existe $k in ]0,1[$ tel que :
 $ forall x in ]0,1[, abs(g'(x)) <= k $ 
