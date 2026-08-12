@@ -14,7 +14,7 @@
 = Exemples de groupes connus
 
 - $(NN, +)$ *n'est pas* un groupe car tous les élements de $NN$ ne possèdent pas de symétrique pour +.
-- $(ZZ, +)$ est un groupe #text(blue)[(Marie > Zelda apparemment)]
+- $(ZZ, +)$ est un groupe
 - $(ZZ\/n ZZ, +)$ est un groupe
 - $(RR, +)$ est un groupe
 - $(RR^*, times)$ est un groupe
