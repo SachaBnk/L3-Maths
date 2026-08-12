@@ -2,11 +2,7 @@
 
 ## Cours de Sacha, avec l'aide de Julia, Marceau, Naël et Élie 💪
 
-**Contact :**
-
-@stekachez : https://www.instagram.com/stekachez
-
-Kinks : https://www.supermajor.gg/ultimate/player/Kinks?id=S1930585
+**Contact :** [stekachez](https://www.instagram.com/stekachez) (pôtits dessins sur instagram) ou [Kinks](https://www.supermajor.gg/ultimate/player/Kinks?id=S1930585)
 
 **Vous pouvez partager ce repo à qui vous voulez en me créditant ⬆️**
 
